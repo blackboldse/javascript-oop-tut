@@ -14,13 +14,28 @@ Table of contents
 - abstract classes
 
 ### First class
+
 ```js
 class Animal {
-  
+  constructor(name, age) {
+    this.name = name;
+    this.age = age;
+  }
+
+  getInfor() {
+    return `The name animal is ${this.name} and age is ${this.age}`;
+  }
 }
 ```
 
 ### First instances
+
+```js
+const firstAnimal = new Animal("Nana", 2);
+console.log(firstAnimal.getInfor());
+const secondAnimal = new Animal("Lulu", 3);
+console.log(secondAnimal.getInfor());
+```
 
 ### Inheritance
 
