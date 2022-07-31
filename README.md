@@ -68,7 +68,21 @@ class Dog extends Animal {
   }
 }
 // For ex 2
-class Programer extends Person {}
+class Programer extends Person {
+  constructor(firstName, lastName, birthYear, major) {
+    super(fistName, lastName, birthYear);
+    this.major = major;
+  }
+
+  work() {
+    return `My major is ${this.major}`;
+  }
+}
+
+const blackbold = new Programer("black", "bold", 2000, "Front-end");
+console.log(blackbold.work());
+// black bold (2000)
+// My major is Front-end
 ```
 
 ### Encapsulation
