@@ -14,6 +14,11 @@ Table of contents
 - abstract classes
 
 ### First class
+```js
+class Animal {
+  
+}
+```
 
 ### First instances
 
