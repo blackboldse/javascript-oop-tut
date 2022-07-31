@@ -26,6 +26,19 @@ class Animal {
     return `The name animal is ${this.name} and age is ${this.age}`;
   }
 }
+
+// For ex 2
+class Person {
+  constructor(firstName, lastName, birthYear) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.birthYear = birthYear;
+  }
+
+  getInfor() {
+    return `${this.firstName} ${this.lastName} (${this.birthYear})`;
+  }
+}
 ```
 
 ### First instances
@@ -35,9 +48,42 @@ const firstAnimal = new Animal("Nana", 2);
 console.log(firstAnimal.getInfor());
 const secondAnimal = new Animal("Lulu", 3);
 console.log(secondAnimal.getInfor());
+
+// for ex 2
+const firstPerson = new Person("Black", "Bold", 2000);
+console.log(firstPerson.getInfor());
 ```
 
 ### Inheritance
+
+```js
+class Dog extends Animal {
+  constructor(name, age, breed) {
+    super(name, age);
+    this.breed = breed;
+  }
+
+  bark() {
+    return `woof`;
+  }
+}
+// For ex 2
+class Programer extends Person {
+  constructor(firstName, lastName, birthYear, major) {
+    super(fistName, lastName, birthYear);
+    this.major = major;
+  }
+
+  work() {
+    return `My major is ${this.major}`;
+  }
+}
+
+const blackbold = new Programer("black", "bold", 2000, "Front-end");
+console.log(blackbold.work());
+// black bold (2000)
+// My major is Front-end
+```
 
 ### Encapsulation
 
