@@ -109,6 +109,8 @@ console.log(blackbold.hello()); // My name is black bold, (2000). I am a program
 
 ### Encapsulation
 
+Let's see a simple example of encapsulation that contains two data members with its setter and getter methods:
+
 ### Polymorphism
 
 ### Abstract classes
