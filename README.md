@@ -15,6 +15,7 @@ Table of contents
 
 ### First class
 
+On this slide we are creating our first class. Remember to add the constructor method that will enable the creation of instances (objects) based on our class.
 We talked about objects, which are one of the most interesting parts of JavaScript.
 In this part wel'll go up one level, introducing classes.
 What are classes? They are a way to define a common parttern for multiple objects.
@@ -31,9 +32,11 @@ class Animal {
     return `The name animal is ${this.name} and age is ${this.age}`;
   }
 }
+```
 
-// For ex 2
-// Suppose we have a class Person:
+Suppose we have a class Person:
+
+```js
 class Person {
   constructor(firstName, lastName, birthYear) {
     this.firstName = firstName;
@@ -49,6 +52,8 @@ class Person {
 
 ### First instances
 
+On the previous slide we created a new class, added a constructor method that takes in 2 arguments - name and age. To create an object from this constructor method we need to use the new keyword and pass in the given name and age of the animal object that we are creating. We also have added a getInfo method that returns the information about the object:
+
 ```js
 const firstAnimal = new Animal("Nana", 2);
 console.log(firstAnimal.getInfor()); // The name animal is Nana and age is 2
@@ -62,6 +67,7 @@ console.log(firstPerson.getInfor()); // Black Bold (2000)
 
 ### Inheritance
 
+Class inheritance is a feature that enables certain classes to tak all the methods and properties of another one(parent class) and makes it possible to extend the parent class by adding more:
 A class can <strong>extend</strong> another class, and objects initialized using that class inherit all the methods of both classes.
 
 ```js
@@ -75,8 +81,11 @@ class Dog extends Animal {
     return `woof`;
   }
 }
-// For ex 2
-// We can define a new class Programer that extends Person:
+```
+
+We can define a new class <code>Programer</code> that extends <code>Person</code>:
+
+```js
 class Programer extends Person {
   constructor(firstName, lastName, birthYear, major) {
     super(fistName, lastName, birthYear);
@@ -87,7 +96,11 @@ class Programer extends Person {
     return `My major is ${this.major}`;
   }
 }
-// Now if we instantiate a new object with class Programmer, it has access to the work() method:
+```
+
+Now if we instantiate a new object with class <code>Programmer</code>, it has access to the <code>work()</code> method:
+
+```js
 const blackbold = new Programer("black", "bold", 2000, "Front-end");
 console.log(blackbold.work());
 // black bold (2000)
@@ -109,7 +122,30 @@ console.log(blackbold.hello()); // My name is black bold, (2000). I am a program
 
 ### Encapsulation
 
-Let's see a simple example of encapsulation that contains two data members with its setter and getter methods:
+Encapsulation is a restriction mechanism making accessing the data impossilbe without using special methods dedicated for this. In the example below we marked weight as a private property and in order to get and set a value we need to use the getter and setter method:
+
+```js
+class Cat extends Animal {
+  #weight;
+  constructor(name, age, weight) {
+    super(name, age);
+    this.#weight = weight;
+  }
+
+  getWeight() {
+    return this.#weight;
+  }
+
+  setWeight(weight) {
+    this.#weight = weight;
+  }
+
+  const myCat = new Animal('Mewo', 2, '3kg')
+  console.log(myCat.getWeight());   //Output: 3kg
+  myCat.setWeight('3.5kg');
+  console.log(myCat.getWeight());   //Output: 3.5kg
+}
+```
 
 ### Polymorphism
 
