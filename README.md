@@ -173,6 +173,62 @@ console.log(test.isInDict("kat")); // false
 
 ### Polymorphism
 
+Polymorphism is a concept that utilizes inheritance for reusing methods multiple times with a different behaviour depending on class types. To understand this lets look at our example - in the dog class we will remove the bark method and in the animal class we'll add a makeSound method which will be overridden by cat and dog classes.
+
+```js
+class Animal {
+  constructor(name, age) {
+    this.name = name;
+    this.age = age;
+  }
+
+  makeSound() {
+    return `Some nice sound made`;
+  }
+}
+```
+
+```js
+class Dog extends Animal {
+  constructor(name, age, breed) {
+    super(name, age);
+    this.breed = breed;
+  }
+
+  makeSound() {
+    return `woof`;
+  }
+}
+```
+
+```js
+class Cat extends Animal {
+  constructor(name, age, colour) {
+    super(name, age);
+    this.colour = colour;
+  }
+
+  makeSound() {
+    return `mewo`;
+  }
+}
+```
+
+```js
+const myDog = new Dog("Nana", 2, "wild grace");
+const myCat = new Cat("Mewow", 6, "4kg");
+
+console.log(myDog.makeSound());
+console.log(myCat.makeSound());
+```
+
+Output:
+
+```text
+woof
+meow
+```
+
 ### Abstract classes
 
 Abstract class is a class which can't be instantiated and require subclasses which inherit from a particular abstract class to provice implementations. We will change the animal class to an abstract class. It will not be possilbe to create a instance of this class anymore like on slide number 3 and we will mark makeSound as an abstract method - in order to use it, a subclass must declare its own implementation of this method.
