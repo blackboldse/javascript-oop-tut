@@ -107,7 +107,7 @@ console.log(blackbold.work());
 // My major is Front-end
 ```
 
-Inside a child class, you can reference the parent class calling super():
+Inside a child class, you can reference the parent class calling <code>super()</code>:
 
 ```js
 class Programmer extends Person {
@@ -122,7 +122,7 @@ console.log(blackbold.hello()); // My name is black bold, (2000). I am a program
 
 ### Encapsulation
 
-Encapsulation is a restriction mechanism making accessing the data impossilbe without using special methods dedicated for this. In the example below we marked weight as a private property and in order to get and set a value we need to use the getter and setter method:
+Encapsulation is a restriction mechanism making accessing the data impossilbe without using special methods dedicated for this. In the example below we marked weight as a private property and in order to get and set a value we need to use the <code>getter</code> and <code>setter</code> method:
 
 ```js
 class Cat extends Animal {
