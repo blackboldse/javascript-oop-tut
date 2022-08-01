@@ -79,3 +79,5 @@ console.log(myDog.makeSound());
 // console.log(myCat.getWeight());
 // myCat.setWeight("4.5kg");
 // console.log(myCat.getWeight());
+
+// ENCAPSULATION
