@@ -2,7 +2,7 @@
 
 ### Introduction
 
-In this tutorial we will explore the funcamentals for Object Oriented Programming (OOP) in Javascript in a practical way with examples.
+In this tutorial we will explore the funcamentals for <strong>Object Oriented Programming</strong> (OOP) in Javascript in a practical way with examples.
 
 Table of contents
 
@@ -14,6 +14,11 @@ Table of contents
 - abstract classes
 
 ### First class
+
+We talked about objects, which are one of the most interesting parts of JavaScript.
+In this part wel'll go up one level, introducing classes.
+What are classes? They are a way to define a common parttern for multiple objects.
+Let's take a Animal object:
 
 ```js
 class Animal {
