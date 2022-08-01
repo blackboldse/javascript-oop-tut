@@ -147,6 +147,30 @@ class Cat extends Animal {
 }
 ```
 
+More example with <code>Set.has()</code> method:
+
+```js
+// function setup(input)
+// function isIndict(word)
+// setup(["cat", "car", "bar"])
+// isInDict{"cat"} // true
+// isIndict{"bat"} // false
+
+class Dictionary {
+  constructor(wordsArray) {
+    this.dict = new Set(wordsArray); // Create a new set using Set() constructor
+  }
+
+  isInDict(word) {
+    return this.dict.has(word); // As word exists word, it will return true
+  }
+}
+
+const test = new Dictionary(["cat", "car", "bar"]);
+console.log(test.isInDict("cat")); // true
+console.log(test.isInDict("kat")); // false
+```
+
 ### Polymorphism
 
 ### Abstract classes
