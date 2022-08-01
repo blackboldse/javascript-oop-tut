@@ -2,7 +2,7 @@
 
 ### Introduction
 
-In this tutorial we will explore the funcamentals for Object Oriented Programming (OOP) in Javascript in a practical way with examples.
+In this tutorial we will explore the funcamentals for <strong>Object Oriented Programming<strong> (OOP) in Javascript in a practical way with examples.
 
 Table of contents
 
