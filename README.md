@@ -15,6 +15,11 @@ Table of contents
 
 ### First class
 
+We talked about objects, which are one of the most interesting parts of JavaScript.
+In this part wel'll go up one level, introducing classes.
+What are classes? They are a way to define a common parttern for multiple objects.
+Let's take a Animal object:
+
 ```js
 class Animal {
   constructor(name, age) {
