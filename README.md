@@ -233,6 +233,56 @@ meow
 
 Abstract class is a class which can't be instantiated and require subclasses which inherit from a particular abstract class to provice implementations. We will change the animal class to an abstract class. It will not be possilbe to create a instance of this class anymore like on slide number 3 and we will mark makeSound as an abstract method - in order to use it, a subclass must declare its own implementation of this method.
 
-Refer: @pyplance_code
+```js
+class Animal {
+  constructor(name, age) {
+    this.name = name;
+    this.age = age;
+    if (this.constructor == Animal) {
+      throw new Error("Cannot create a instance of Abstract class.");
+    }
+  }
+
+  makeSound() {
+    throw new Error("Abstract method doesn't have an implementation.");
+  }
+}
+```
+
+```js
+class Dog extends Animal {
+  constructor(name, age, breed) {
+    super(name, age);
+    this.breed = breed;
+  }
+
+  makeSound() {
+    return `woof`;
+  }
+}
+```
+
+```js
+class Cat extends Animal {
+  constructor(name, age, weight) {
+    super(name, age);
+    this.weight = weight;
+  }
+
+  // makeSound(){
+  //   return `mewo`
+  // }
+}
+```
+
+```js
+const myDog = new Animal("Na", 2, "Wild");
+const myCat = new Animal("Mewo", 5, "3.4kg");
+
+console.log(myCat.makeSound());
+// makeSound() method isn't avaliable
+```
+
+Refer: <code>@pyplance_code</code>
 <br>
-Editor by: @blackboldse
+Editor by: <code>@blackboldse</code>
