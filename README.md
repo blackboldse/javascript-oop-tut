@@ -309,6 +309,26 @@ var dog = {
 But we don't want <em>just a Nana</em> dog, we want a way to create <em>any dog</em> that has a name, a breed and a weight. And, again, to do that we're going to write some code that looks like a function, with a dash of object syntax thrown in.
 With that introduction, you must be a bit curious--go ahead and turn the page and let's get these constructor figured out and working for us.
 
+### How to create a Constructor
+
+Using constructor is a <strong>two-step</strong> process: first we define a constructor, and then we use it to create objects. Let's first focus on creating a constructor.
+What we want is a constructor that we can use to create dogs, and, more specifically, dogs with names, breeds and weights. So, we're going to define a function, called the constructor, that know how to create dogs. Like this:
+
+```js
+function Dog(name, breed, weight) {
+  this.name = name;
+  this.breed = breed;
+  this.weight = weight;
+}
+```
+
+The parameters <code>name</code>, <code>breed</code>, <code>weight</code> of the function match the properties we want to supply for each individual dog.
+<code>this.name = name</code> This part feels more like an object because we're assigning each parameter to waht looks like a property.
+
+```
 Refer: <code>@pyplance_code</code>
 <br>
+[1] — Head First JavaScript Programming 2014
+<br>
 Editor by: <code>@blackboldse</code>
+```
