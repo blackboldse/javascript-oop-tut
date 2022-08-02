@@ -122,7 +122,7 @@ console.log(blackbold.hello()); // My name is black bold, (2000). I am a program
 
 ### Encapsulation
 
-Encapsulation is a restriction mechanism making accessing the data impossilbe without using special methods dedicated for this. In the example below we marked weight as a private property and in order to get and set a value we need to use the <code>getter</code> and <code>setter</code> method:
+Encapsulation is a restriction mechanism making accessing the data impossible without using special methods dedicated for this. In the example below we marked weight as a private property and in order to get and set a value we need to use the <code>getter</code> and <code>setter</code> method:
 
 ```js
 class Cat extends Animal {
@@ -282,6 +282,32 @@ const myCat = new Animal("Mewo", 5, "3.4kg");
 console.log(myCat.makeSound());
 // makeSound() method isn't avaliable
 ```
+
+## For beginner
+
+### Introducing Object Constructor
+
+Object constructor, or "constructor" for short, are your path to better object creation. Think of a constructor like little factory taht can create an endless number of similar objects.
+In terms of code, a constructor is quite similar to a function that returns an object: you define it once and invoke it every time you want to create a new object. But us you'll see there's a little extra that goes intro a constructor.
+The best way to see how constructor work is to create one. Let's revisit our old friend, the dog object, from earlier in the book and write a constructor to create as many dogs as we need. Here's a verion of the dog object we've used before, with a name, a breed and a weight.
+
+```text
+Dog: name, breed, weight
+```
+
+Now, if we were going to define such a dog with an object literal, it would look like this:
+
+```js
+var dog = {
+  name: "Nana",
+  breed: "Mixed",
+  weight: 28,
+};
+// Just a simple dog object created by an object literal. Now we need to figure out how to create a lot of these pupies.
+```
+
+But we don't want <em>just a Nana</em> dog, we want a way to create <em>any dog</em> that has a name, a breed and a weight. And, again, to do that we're going to write some code that looks like a function, with a dash of object syntax thrown in.
+With that introduction, you must be a bit curious--go ahead and turn the page and let's get these constructor figured out and working for us.
 
 Refer: <code>@pyplance_code</code>
 <br>
