@@ -325,10 +325,24 @@ function Dog(name, breed, weight) {
 The parameters <code>name</code>, <code>breed</code>, <code>weight</code> of the function match the properties we want to supply for each individual dog.
 <code>this.name = name</code> This part feels more like an object because we're assigning each parameter to waht looks like a property.
 
+### How to use a Constructor
+
+We said using a constructor is a two-step process: first we create a constructor, then we use it. Well, we've created a Dog constructor, so let's use it. Here's how we do that:
+
+```js
+const nana = new Dog("Nana", "Mixed", 28);
+// To create a dog, we use the new operator with the constructor.
 ```
+
+Now that we have a constructor for dogs, we can keep making them:
+
+```js
+const ronron = new Dog("Ronron", "Boom", 15);
+const lulu = new Dog("Lulu", "Woof", 18);
+```
+
 Refer: <code>@pyplance_code</code>
 <br>
 [1] — Head First JavaScript Programming 2014
 <br>
 Editor by: <code>@blackboldse</code>
-```
